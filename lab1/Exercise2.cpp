@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 using namespace std;
+//hehe
 						//=================================NODE==================================================//
 class Node
 {
@@ -292,6 +293,10 @@ DoubleLinkedList& DoubleLinkedList::operator+= (Node* node)
 	{
 		for (Node* i = pHead_; i != nullptr; i = i->getNext())
 		{
+			if (node->getData() == i->getData())
+			{
+				return *this;
+			}
 			if (node->getData() < i->getData())
 			{
 				this->insert_advance(i, node);
